@@ -11,8 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    uses: anujdevopslearn/GithubActions/.github/workflows/maven-reusable.yml@master
+    uses: mynameismishu/GithubActions/.github/workflows/maven-reusable.yml@master
 
   deploy:
     runs-on: ubuntu-latest
