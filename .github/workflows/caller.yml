@@ -5,5 +5,5 @@ on:
 
 jobs:
   Reusable-caller-job:
-    uses: ./.github/workflows/maven-cache.yml@master
-    # uses: mynameismishu/SpringBootDocker/.github/workflows/maven-cache.yml@master
+    # uses: ./.github/workflows/maven-cache.yml@master
+    uses: mynameismishu/SpringBootDocker/.github/workflows/maven-cache.yml@master
