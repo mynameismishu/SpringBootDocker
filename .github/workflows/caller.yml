@@ -5,28 +5,5 @@ on:
 
 jobs:
   Reusable-caller-job:
-    # uses: ./.github/workflows/maven-cache.yml
-    uses: mynameismishu/SpringBootDocker/.github/workflows/maven-cache.yml@master
- 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: Reusable-caller-job
-    steps:
-    - name: Deploy Application using SSH
-      uses: cross-the-world/ssh-scp-ssh-pipelines@latest
-      env:
-       WELCOME: "ssh scp ssh pipelines"
-       LASTSSH: "Doing something after copying"
-      with:
-       host: '3.93.199.127'
-       user: 'mihaipodaruvoda'
-       pass: 'ruvoda0A@bnksm'
-       port: 42006
-       connect_timeout: 10s
-       first_ssh: |
-        rm -rf /tmp/docker
-        mkdir -p /tmp/docker
-       scp: |
-        'Dockerfile' => /tmp/docker
-       last_ssh: |
-        docker run -d ${{ secrets.DOCKERHUB_USERNAME }}/springboot-image:latest
+    uses: ./.github/workflows/maven-cache.yml@master
+    # uses: mynameismishu/SpringBootDocker/.github/workflows/maven-cache.yml@master
