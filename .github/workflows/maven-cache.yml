@@ -8,7 +8,10 @@ on:
         required: true
       DOCKERHUB_TOKEN:
         required: true
-
+      SSH_HOST_USER:
+        required: true
+      SSH_HOST_PASS:
+        required: true
 jobs:
   build:
     env:
