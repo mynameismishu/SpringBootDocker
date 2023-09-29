@@ -57,8 +57,8 @@ jobs:
           LASTSSH: "Doing something after copying"
         with:
           host: '3.93.199.127'
-          user: 'mihaipodaruvoda'
-          pass: 'ruvoda0A@bnksm'
+          user: ${{ secrets.SSH_HOST_USER }}
+          pass: ${{ secrets.SSH_HOST_PASS }}
           port: 42006
           connect_timeout: 10s
           first_ssh: |
