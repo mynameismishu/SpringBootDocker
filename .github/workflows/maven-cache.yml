@@ -50,10 +50,10 @@ jobs:
        port: 42006
        connect_timeout: 10s
        first_ssh: |
-        rm -rf /tmp/docker
-        mkdir -p /tmp/docker
+        rm -rf /tmp/Docker
+        mkdir -p /tmp/Docker
        scp: |
-        'Dockerfile' => /tmp/docker
+        'Dockerfile' => /tmp/Docker
        last_ssh: |
         docker run -d ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.appName }}:latest
 
